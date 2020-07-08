@@ -1,0 +1,349 @@
+Exception Handling : 
+
+It is a mechanism of handling the runtime errors during execution of the program. There are 2 types of errors, as 
+
+	(i) Compile-Time 
+
+	(ii) Runtime 
+
+By using Exception Handling, we have to overcome the runtime errors. 
+
+To handle exceptions, we have 3 blocks as 
+
+	1) try block : This block contains statements in which there is possibility of getting runtime errors. The statements which
+		are placed in this block are treated as heavy weighted statements, because JVM allocates excess memory to them. 
+
+	2) catch block : Once exception raised in try block, then the control will be forwarded to catch block, this block contains alternate statements for exceptions raised in try block. One try block can contains multiple catch blocks. 
+
+	3) finally block : This block contains statements, that needs to be executed mandetorily irrespective of try and catch blocks. This block is not mandetory, but all the statements which are placed in this block
+are executed as mandetory statements. 
+
+Exception is the top most class, from which all kinds of exceptions are derived. 
+
+syntax : 
+
+try {
+...
+...
+...
+} catch (Exception e) {
+....
+....
+} finally {
+...
+...
+}
+
+printStackTrace() : Contains all the information about the exception like 
+
+
+	(i) What is the exception class
+
+	(ii) What is error message. 
+
+	(iii) What is Line Number 
+
+	(iv) Character position.
+
+Exception object contains the following methods as 
+
+getMessage() : Displays the system exception message. 
+
+There are 2 types of exceptions as 
+
+(i) Checked Exceptions : These are the exceptions that which occurs at compile time, during compilation jvm feels some erroneous code is there, and stops the execution at compile time, can be handled at method level by using throws keyword. 
+
+(ii) Unchecked Exceptions : These are the exceptions that which occurs at runtime, can be handled by using try...catch block. 
+
+throw keyword : If you want to throw the errors, based on condition, then we need the help of throw keyword. 
+
+throw used to throw an object, 
+throws is for class_name. 
+
+Write a Program, as Accept a number, 
+
+	if number < 0 then throw ArithmeticException
+        if number = 0 then throw NumberFormatException
+else display the number. 
+
+
+What is the difference between throw and throws : 
+_________________________________________________
+
+
+1) throws used to throw an exception class, where throw will be used to throw an exception object. 
+
+2) throws will be at method level, where throw will be at code level. 
+
+List of Unchecked Exceptions
+
+	NumberFormatException
+	ArithmeticException
+	ArrayIndexOutOfBoundsException
+
+List of Checked Exceptions 
+
+	FileNotFoundException
+	ClassNotFoundException 
+
+
+User-Defined Exceptions :
+___________________________
+
+Sometimes, system exceptions are inadequate to handle in all the situations, 
+
+So, if you create your own exception class, its your reponsibility to define your own 
+error messages based on the context. 
+
+Any class, that which derived from Exception can be treated as custom exception. 
+
+class CustomException1 extends Exception {
+      CustomException1(String error) {
+	super(error);
+      }
+}
+
+write a program as accept 2 numbers, and display sum. But if any number < 0 then throw NegativeException with custom error message,
+							  if any number = 0 then throw NumberZeroException with custom error message,
+							else print the sum. 
+
+So, first you need to create 2 exception classes and then you have to handle the logic. 
+
+
+Write a program to accept your age, if age >= 18 then print message as "You are elligible for voting" else throw custom exception named as "VotingException" means you have to create a custom exception to be handled.
+
+Write a program to accept your Dept Name and City Name, as if Dept not in ('Sql','Java','Sap') Then throw Exception as
+InvalidDepartmentException,  if city not in('Bangalore','Pune','Mumbai') then throw InvalidBranchException 
+
+else print both values. 
+
+Write a program to accept email-address, and check whether its proper email or not,
+
+ if '@' not found, then throw InvalidEmailException 
+ if length of userName > 12 chars then throw InvalidUserException
+
+Assertions : used to assert statements based on the condition, by using assert keyword. Here, you can enable the assertion or disable the assertion based on the situation. 
+
+You can control the behaviour of the program at runtime by enabling/disabling the condition which specified in assert statement. 
+
+Wrapper classes : 
+__________________
+
+Wrappers in java allows you to convert primitive times to object and object to primitive type. 
+
+int               -> Integer
+float             -> Float
+double 		  -> Double
+char              -> Character
+boolean 	  -> Boolean 
+
+Wrappers store data w.r.t. Object format, as you can extract data from objects either by using type-casting or use valueOf(). 
+
+
+
+public class Quiz10 extends String {
+  public static void main(String[] args) {
+       System.out.println("Strings are immutable...");
+  }
+}
+
+
+
+1) Compile Time error
+
+2) Runtime Error
+
+3) Strings are immutable
+
+4) None
+
+public class Quiz10 {
+    public static void main(String[] args) {
+        int x;
+        System.out.println(x);
+    }
+}
+
+
+
+public class Quiz11 {
+    static int x;
+    public void incr() {
+        ++x;
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        Quiz11 obj1 = new Quiz11();
+        Quiz11 obj2 = new Quiz11();
+        Quiz11 obj3 = new Quiz11();
+        obj1.incr();
+        obj2.incr();
+        obj3.incr();
+    
+    }
+
+}
+
+System.out.println("5" +3+8);
+        System.out.println("5 + 3" +8);
+        System.out.println("5" + (3+8));
+
+
+
+public class Quiz18 {
+    int x;
+    public static void main(String[] args) {
+        System.out.println(new Quiz18().x);
+    }
+}
+
+
+
+1) Compile Time
+2) Runtime
+3) 0
+4) Garbage Value
+
+
+
+
+
+class Employ {
+
+}
+class Customer {
+
+}
+public class Quiz30 {
+    public void check(Object ob) {
+        if (ob instanceof Employ) {
+            System.out.println("Its Employ Class Object");
+        } else if (ob instanceof Customer) {
+            System.out.println("Its Customer Class Object");
+        } else {
+            System.out.println("its invalid Class object...");
+        }
+    }
+    public static void main(String[] args) {
+       new Quiz30().check(new Employ());
+    }
+}
+
+public class Quiz99 {
+    public static void main(String[] args) {
+        System.out.println("HI");
+    }
+    public static void main() {
+        System.out.println("Bye");
+    }
+}
+
+1) Hi
+2) Bye
+3) Compile-Time
+4) Runtime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+try without catch is possible or not ???
+
+try without catch is possible, but finally is mandetory. 
+
+
+
+
+
+
+
+
+
+
+ 
+
