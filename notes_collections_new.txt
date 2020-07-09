@@ -1,0 +1,166 @@
+Arrays are static data structures. One they are assigned we cannot change the size. 
+
+A collection is an object that contains a group of objects within it. These objects are called the elements of the collection.  The elements of collectin descend from a common parent type.  Collections have an adv. over arrays that collectino can grow to any size unlike arrays. 
+
+
+To deal with collections, we need the help of java.util package.
+
+In collections framework, we have top 3 interfaces as 
+
+1) List : this interface extends the collection to handle sequence or a list of objects. Elements can be inserted in a list and can be accessed from a list using their index pos. in the list.
+
+	ArrayList
+	LinkedList classes are falling under List interface.
+
+2) Set : This interface extends the Collection interface to handle sets containing unique elements.  This interface does not allow any duplicate elements in a set.
+
+		HashSet
+		LinkedHashSet : These classes are falling under Set interface. 
+
+*** Hashset displays data by elimnating duplicates w.r.t. Random order, where LinkedHashSet allows you to display data w.r.t. Insertion order ***
+
+3) SortedSet :  Used to extends the Set interface to handle the sorted sets. The elements of a set are ordered in ascending order in a sorted set.  
+
+	  TreeSet is class, that which falling under SortedSet. 
+
+
+Scanner : Allows you to read the data from the keyboard. 
+
+Scanner sc = new Scanner(System.in);
+
+next()
+nextLine() 
+nextInt()
+nextDouble()
+
+SimpleDateFormat : Used to convert date to string and string to date. 
+
+SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+
+sdf.format() : Used to convert date to string. 
+
+sdf.parse() : Used to convert string to date. 
+
+Map : Allows you to store data w.r.t. Key value pairs. 
+
+	HashMap() and HashTable() are falling under map interface. 
+
+
+
+What is the purpose of TreeSet : 
+
+
+
+
+Exception in thread "main" java.lang.ClassCastException: com.dxc.col.Employ cannot be cast to java.lang.Comparable
+	at java.util.TreeMap.compare(TreeMap.java:1294)
+	at java.util.TreeMap.put(TreeMap.java:538)
+	at java.util.TreeSet.add(TreeSet.java:255)
+	at com.dxc.col.SortEmploy.main(SortEmploy.java:9)
+
+When you try to sort Employ class objects, it shows the above exception, because we are not specified the parameter on which basis we have to sort, as sort by (empno or name or basic) we have to specify. 
+
+To specify the parameter, we have to use comparator interface in that we have compare method, in that method we have to write the code. 
+
+
+Generics : 
+
+Provides an opportunity to pass data types at runtime. 
+
+If you want to write a method as write once and apply for all data types, then 
+we need the help of Generics. 
+
+Generics can be specified by using <T>, 
+
+then in place of <T> we can pass any type at runtime. 
+
+Advantages :
+____________
+
+	We can reduce the size of the program.
+
+	No Typecasting
+
+	Security to data. 
+
+		
+
+
+In java, we have to represent value as a field by using getters and setters.
+
+getters are used to read the data. 
+
+Where setters are used to assign the data. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
