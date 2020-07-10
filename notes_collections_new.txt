@@ -93,6 +93,10 @@ getters are used to read the data.
 Where setters are used to assign the data. 
 
 
+meet by 2 PM 
+
+Lunch break
+
 
 
 

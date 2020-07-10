@@ -1,0 +1,185 @@
+Files : 
+
+A file is a collection of data, that which allows you to store the output permanently.
+
+To deal with files, we need java.io package. 
+
+File class : This class allows you to deal with files.
+
+File f1 = new File(filename);
+
+methods : 
+__________
+
+getName()
+getParent()
+getPath()
+
+FileWriter : This class allows you to write the contents into the file w.r.t. Unicode format. 
+
+FileWriter fw = new FileWriter(filename);
+
+write() : used to write data. 
+
+FileReader : Used to read data char/char and returns the ascii value. (We have to typecast and print) 
+
+read() : Used to read data char/char and returns ascii value, it returns -1 once it reaches the 
+end of file. 
+
+FileInputStream  : Used to read data w.r.t. Stream of Bytes. 
+
+read() : Used to read data char/char and returns ascii value, it returns -1 once it reaches the end of file. 
+
+
+FileOutputStream : Used to write data w.r.t. Stream of bytes. 
+
+write() : Used to write data char/char into the file. 
+
+
+DataOutputStream : Used to write primitive data into the file. 
+
+DataOutputStream dout = new DataOutputStream(filename);
+
+writeInt()
+writeDouble()
+writeUTF() 
+writeBoolean() 
+
+DataInputStream : Used to read primitives from the file. 
+
+readInt()
+readDouble()
+readUTF()
+readBoolean()
+
+BufferedReader : Allows you to read data from the keyboard. 
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+readLine() : used to read one line of input. 
+
+ObjectOutputStream : Used to write objects into the file. 
+
+ObjectOutputStream objout=new ObjectOutputStream(filename);
+
+writeObject() -> Used to write object into the file. 
+
+ObjectInputStream : Used to read objects from the file. 
+
+readObject() : Used to read object from the file. 
+
+Serilization : Used to write Custom Objects into the file. 
+
+Application Architecture : 
+__________________________
+
+There are 3 types of application architectures as 
+
+	1) Single Tier
+
+	2) Two Tier
+
+	3) Three Tier 
+
+Each Application architecture contains 3 layers as 
+
+	1) User Services : Presentation Layer
+
+	2) Business Services : Performs all business operations and validations
+
+	3) Data Services : Used to store data. 
+
+StudentDAL class (its data layer class), in that we have to perform the following operations as
+
+	1) Add Student
+
+	2) Show Student
+
+	3) Search Student
+
+	4) Update Student
+
+	5) Delete Student 
+
+
+Here, we need a list of students, where all objects needs to be accessed. 
+
+Validations : 
+______________
+
+
+	1) Sno not negative
+
+	2) name min 3 chars
+
+	3) city min 3 chars
+
+	4) cgp not negative 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
