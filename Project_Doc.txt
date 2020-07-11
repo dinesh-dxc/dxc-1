@@ -1,0 +1,39 @@
+Project :
+__________
+
+
+Agent
+
+	agentId (int)
+	firstName (String)
+	lastName (String)
+	gender (Strinng)
+	payMode (int)
+	annualPremium (double) 
+
+Validations : 
+_______________
+
+
+1) AgentId not negative
+
+2) firstName & lastName will not contains spaces and min. 3 chars
+
+3) Gener (Male/Female)
+
+4) payMode(1 or 2 or 3) 
+
+5) annualPremium between 25000 to 100000
+
+Write code for 
+
+  1) Add Agent
+  2) Search Agent
+  3) Show Agent
+  4) Update Agent
+  5) Delete Agent 
+  6) Write Agent File
+  7) Read Agent File
+  8) Exit 
+
+ 
