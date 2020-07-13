@@ -1,0 +1,191 @@
+Multi-Threading : 
+_________________
+
+A thread is a sequential path of execution of the program. In multi-threading
+more than one task can be performed in a single program simultaneously. 
+
+If you want to make best utilization of CPU resources, then we need the help of 
+multi-threading. As idle time kept to minimum. 
+
+In multi-threading, we have different methods as
+
+1) start() : If you want to invoke the given thread, then we need the help of start(). 
+
+2) run() : Once you invoke the start(), the code which is there in run() gets executed. 
+
+3) sleep() : To make a thread to wait for specific milliseconds time, then we need the help 
+of sleep(). 
+
+4) abort()  : To terminate a thread. 
+
+Creating Threads : Threads are implemented in the form of objects that contains a method called run()
+
+Life cycle of a Thread : 
+
+During the life time of a thread, there are many states it can enter. 
+
+1. Newborn state
+
+2. Runnable state
+
+3. Running state 
+
+4. Blocked state 
+
+5. Dead State 
+
+Newborn State : When we create a thread object, the thread is born and is said to be in newborn state. Here the thread is not scheduled for running. 
+
+Runnable State : This state means the thread is ready for execution and is waiting for the availablility of the processor. That is, the thread has joined the queue of threads that are waiting for execution. If all threads have equal priority then the time slots for execution in first-come first-serve manner. 
+
+Running State : The Processor has given its time to the thread for its execution, the thread runs until it relinquishes control on its own or it is preempted by a higher priority thread. 
+
+Blocked State : A thread is said to be the blocked when it is prevented from entering into the runnable state and subsequently the running state. This happens when the thread is suspended,sleeping or waiting in order to satisfy certain requirements. 
+
+Dead State : A running thread ends its life when it has completed executing its run() method. It is a natural death. 
+
+
+You can create thread in 2 ways
+
+(i) extends Thread 
+
+(ii) implements Runnable 
+
+
+class Class1 extends Thread {
+...
+...
+...
+}
+
+class Class2 implements Runnable {
+...
+...
+...
+}
+
+synchronization : If two or more threads trying to access the same resource at same time, it leads to strange results. This problem we call it as synchorization. To overcome this, until one thread leaves the particular location, another thread will not be entered. 
+
+
+Java 8 we have new features : 
+______________________________
+
+
+1) Method References
+
+2) Funtional Interface 
+
+3)Lambda Expressions
+
+4) foreach() method
+
+5) Streams() 
+
+class Hello {
+   public void show() {
+	int x=12;
+        int y=x;
+   }
+   public static void main(String[] args) {
+       display=show;
+   }
+}
+
+
+Method referencing means, refer one method code with another method, without rewriting the existing code, 
+this will reduce the size of the program and improves the performance. 
+
+Lets take as example as 
+
+one interface have a method, 
+
+interface IHello {
+	void sayHello();
+}
+
+We have one class as 
+
+class Demo {
+   public void greeting() {
+     System.out.println("Welcome to Jdk 1.8 new Features...");
+	}
+}
+
+
+
+Now, we have to map the greeting() method reference to IHello method sayHello(), then 
+
+Create an object to interface, and class and follow the syntax
+
+Demo d = new Demo();
+
+IHello obj = d::greeting;
+
+obj.sayHello();
+
+Here above, greeting method reference assigned to IHello interface, that interface contains only one method, then automatically
+]the code assigned to the sayHello() method of interface. 
+
+
+*** If, we have one interface, that which contains only one method, that situation we have to use this ***
+
+Java Lambda Expressions
+
+Lambda expression is a new and important feature of Java which was included in Java SE 8. It provides a clear and concise way to represent one method interface using an expression. It is very useful in collection library. It helps to iterate, filter and extract data from collection.
+
+The Lambda expression is used to provide the implementation of an interface which has functional interface. It saves a lot of code. In case of lambda expression, we don't need to define the method again for providing the implementation. Here, we just write the implementation code.
+
+
+Why use Lambda Expression
+1.	To provide the implementation of interface.
+2.	Less coding.
+
+Java Lambda Expression Syntax
+1.	(argument-list) -> {body}  
+Java lambda expression is consisted of three components.
+1) Argument-list: It can be empty or non-empty as well.
+2) Arrow-token: It is used to link arguments-list and body of expression.
+3) Body: It contains expressions and statements for lambda expression.
+No Parameter Syntax
+1.	() -> {  
+		
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
