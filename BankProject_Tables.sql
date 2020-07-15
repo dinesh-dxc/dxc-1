@@ -16,6 +16,8 @@ Create Table Account
    DateOfOpen TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+select * from account;
+
 Create Table AccountTransaction
 (
       AccountNo int,
