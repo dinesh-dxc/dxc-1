@@ -1,0 +1,118 @@
+
+What is the purpose of Junit ???
+
+JMOCK IT : It is a framework that which allows you to test database. 
+
+It allows you to test data w.r.t. mock data instead of database records. 
+
+To start with JMOCK, we need to add the dependency to the project POM File. 
+
+  <dependency>
+      <groupId>org.jmockit</groupId>
+      <artifactId>jmockit</artifactId>
+      <version>1.33</version>
+      <scope>test</scope>
+    </dependency>
+
+After adding the above dependecy, next your test cases needs to support the JmockIT, so we have to write the annotation at the test case. 
+
+@RunWith(JMockit.class)
+
+
+___________________________________________________________________________________________________
+
+
+What is JMOCK
+
+
+
+
+Used to test the methods, that which are interacting with database. 
+
+
+How to start with JMOCK w.r.t. Maven 
+
+Add the dependecy to the pom.xml 
+
+  <dependency>
+      <groupId>org.jmockit</groupId>
+      <artifactId>jmockit</artifactId>
+      <version>1.33</version>
+      <scope>test</scope>
+    </dependency>
+
+To ensure, the test case will support jmockIt, then we have to use 
+
+@RunWith(JMockit.class)
+
+at the test case level. 
+
+import org.junit.runner.RunWith;
+
+After that define a testcase metehod as
+
+@Test
+	public void testEmploySearch(@Mocked final EmployDAO dao) {
+		
+	}
+
+
+@Mocked is an annotation that which allows you to mock the class that which directly hits the database. 
+
+You can import @Mocked as 
+
+import mockit.Mocked;
+
+ 
+MockUp : This contains the class in which we have to call the Database Methods (EmployDAO). 
+
+@Mock : This annotation which captures object of the class, that which hits the database. 
+
+
+
+You can import this as 
+
+import mockit.Mock;
+import mockit.MockUp;
+
+
+You please write the code as 
+
+		 new MockUp<EmployFactory>() 
+	        {
+	            @Mock
+	            EmployDAO dao() {
+	                return dao;
+	            }
+	        };
+
+The heart for Jmock is Expectations, which contains alternate data for the methods which are hitting the database. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
