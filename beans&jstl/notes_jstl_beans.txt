@@ -1,0 +1,109 @@
+in call
+
+5 mns
+
+JSTL (Java Standard Tag Library) 
+
+Which provides scripting tags for the specific java code. 
+
+
+It provides set of tags, that which simplifies the java business logic. 
+
+
+Advantages : 
+_____________
+
+   1) Fast Develpment and Execution 
+
+		provides different categories of tags, that which improves your given application.
+
+   2) Code Reusability 
+
+		We can use JSTL tags in various pages. 
+
+   3) No Need to use any JSP tags 
+
+		No need to use any java code, as we have jstl tags where we can write java equal code in that. 
+
+
+For implenting JSTL, you need to add the below depedency to the pom file. 
+
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+</dependency>
+
+
+The above depedency will provide all JSTL tags. 
+
+There are 5 types of the tags as
+
+1) core tags : Provides basic output/control structure tags, declaring vairables etc...
+
+You need to add the directive to the <%@ taglib %> to access the code tags. 
+
+You can import core tags as
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+
+Here, prefix is more important as all core tags can be accessable by using prefix specified. 
+
+Here, we specified prefix as "c" then 
+
+out is tag which used to print message or value.
+
+You can print as
+
+<c:out value="Good Morning" /> 
+
+
+
+
+2) Function tags
+
+3) Formatting tags
+
+4) XML tags
+
+5) SQL Tags :
+
+Used to write JDBC code for the given java programs. 
+
+You can define sql tag as
+
+Specify dependecy in pom.xml file
+
+  <dependency>
+		   <groupId>mysql</groupId>
+	      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.5</version>
+	</dependency>
+
+You need to import sql tags in <%@ taglib %> as 
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>    
+
+
+Now, we have to specify jdbc properties. 
+
+We can set by using 
+
+<sql:setDatasource> </sql:setDatasource>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
