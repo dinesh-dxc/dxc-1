@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://bank.dxc.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://bank.dxc.com" xmlns:intf="http://bank.dxc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://bank.dxc.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="createAccount">
+    <complexType>
+     <sequence>
+      <element name="account" type="impl:Account"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Account">
+    <sequence>
+     <element name="accountNo" type="xsd:int"/>
+     <element name="accountType" nillable="true" type="xsd:string"/>
+     <element name="amount" type="xsd:int"/>
+     <element name="cheqFacil" nillable="true" type="xsd:string"/>
+     <element name="city" nillable="true" type="xsd:string"/>
+     <element name="dateOfOpen" nillable="true" type="xsd:dateTime"/>
+     <element name="firstName" nillable="true" type="xsd:string"/>
+     <element name="lastName" nillable="true" type="xsd:string"/>
+     <element name="state" nillable="true" type="xsd:string"/>
+     <element name="status" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="createAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="createAccountReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchAccount">
+    <complexType>
+     <sequence>
+      <element name="accountNo" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="searchAccountResponse">
+    <complexType>
+     <sequence>
+      <element name="searchAccountReturn" type="impl:Account"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="searchAccountRequest">
+
+      <wsdl:part element="impl:searchAccount" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="searchAccountResponse">
+
+      <wsdl:part element="impl:searchAccountResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAccountRequest">
+
+      <wsdl:part element="impl:createAccount" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createAccountResponse">
+
+      <wsdl:part element="impl:createAccountResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AccountService">
+
+      <wsdl:operation name="createAccount">
+
+         <wsdl:input message="impl:createAccountRequest" name="createAccountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createAccountResponse" name="createAccountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAccount">
+
+         <wsdl:input message="impl:searchAccountRequest" name="searchAccountRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:searchAccountResponse" name="searchAccountResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AccountServiceSoapBinding" type="impl:AccountService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="searchAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="searchAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="searchAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AccountServiceService">
+
+      <wsdl:port binding="impl:AccountServiceSoapBinding" name="AccountService">
+
+         <wsdlsoap:address location="http://localhost:8080/BankServiceDemo/services/AccountService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

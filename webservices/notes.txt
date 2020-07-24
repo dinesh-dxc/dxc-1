@@ -1,0 +1,103 @@
+Types of Application architectures 
+
+There are 3 types of application architectures as 
+
+1) Single Tier
+
+2) Two Tier
+
+3) Three Tier
+
+Each application architecture contains 3 layers as 
+
+1) User Services
+
+2) Business Services
+
+3) Data Services 
+
+In Single Tier architecture one single executable file handles all these operations.
+So, single tier architecture applications are called monolythic applications. 
+
+In two-tier architecture, combination of 2 layers will be there  in one application 
+
+and another layer will be there in another application. 
+
+You can implement applications w.r.t. 
+
+Client : {User Services + Business Services} + {Data Services}
+
+Server : {User Services} + {Business Services + Data Services}
+
+In three tier architecture, all these 3 layers resides separately in a single system or different system and performs job as a single unit. 
+
+N-Tier architecture : IN n-tier architecture, the concept of middle ware comes into the picture that which contains business objects which serves your request. 
+
+Webservices : 
+______________
+
+XML : Its a text-based markup language, that which allows you to transfer data 
+towards hetrogeneous applications. 
+
+Webservices contains lot of webmethods that can be called across various programming langauges. 
+
+If you want to make an application as write once and run from any programming language, 
+then we need the help of webservices. 
+
+Webservices has following standards as 
+
+1) SOAP (Simple Object Access Protocol) : It is a communication protocol, that which allows the communication between webservice and client.
+
+2) UDDI (Universal Description, Discovery and Integration) : It is place where we can register and deploy the webservices. 
+
+3) WSDL (Webservices Description Langauge) : It generates the xml vocoblury for webmethods which are there in service. 
+
+
+
+
+
+    <dependency>
+    <groupId>org.apache.axis</groupId>
+    <artifactId>axis</artifactId>
+    <version>1.4</version>
+</dependency>
+    
+    <dependency>
+    <groupId>javax.xml</groupId>
+    <artifactId>jaxrpc-api</artifactId>
+    <version>1.1</version>
+</dependency>
+
+back by 2 pm 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
