@@ -1,0 +1,35 @@
+
+
+
+Library Project :
+
+First login page need to come, check valid user or not w.r.t. libusers table and if ok
+
+go to menu page.
+
+Menu Page we have
+
+Account Details
+Search
+History
+Return
+
+Account Details -> Contains list of books you are taken {from transTable}
+
+Search -> Need to search by
+
+	id
+        Author Name
+        Publication Name
+        All Books
+
+   print all books records in tabular format and followed by checkbox and click on issue button the book(s) to be issued.
+
+ and no.of copies to be decreased
+
+*** Same book same person multiple times not issued ***
+
+once you return the book to be deleted from TransTable and to be added to TransReturn table. 
+
+History contains information about the user (TransReturn) table history
+
