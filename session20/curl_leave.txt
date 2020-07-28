@@ -1,0 +1,5 @@
+http://localhost:8080/LeaveManagementProject/webapi/leave
+
+http://localhost:8080/LeaveManagementProject/webapi/leave/1
+
+curl -vvv -H "Accept:application/json" -X POST -H "Content-Type:application/json" -d '{"leaveStartDate":"2021-11-12","leaveEndDate":"2021-11-13","leaveReason":"test","leaveType":"EL","empId":1000}' "http://localhost:8080/LeaveManagementProject/webapi/leave/applyLeave"
