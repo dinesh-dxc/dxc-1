@@ -1,0 +1,98 @@
+1) Show All Employees
+
+2) List By Employee Id
+
+3) Search By LeaveID
+
+4) Show All Leaves
+
+5) Employee Leave History
+
+6) Pending Leave History
+
+7) ApplyLeave
+
+8) ApproveDeny
+
+For approveDeny
+
+Accept 3 values
+
+	1) Manager Id
+
+	2) Leave Id
+
+	3) Yes/No
+
+        4) ManagerComments 
+
+Validations : 
+
+    1) Is he authorized Manager or not 
+
+    2) If Yes then update ManagerComments and Status as APPROVED
+
+    3) If No then Update ManagerComments, Status as REJECTED and Increase the LeaveBalance 
+
+_______________________________________________________________________________________________________________________
+
+
+CanteenManagement : 
+___________________
+
+   1) Menu
+
+            Show Menu
+            Search By MenuId
+
+  2) Customer
+ 
+           Show Customer
+           Search By CustomerId
+
+  3) Wallet
+           Show By WalletID
+           Show By CustomerID 
+
+  4) Vendor
+         
+          vendorAuthentication
+          Show All Vendors
+          Search By VendorId 
+  
+  5) Orders
+
+          PlaceOrder 
+              You have to accept 
+
+                  CusID, VenId, MenuId, WaletSource, Ord_Date, OrdQty 
+
+               Then calculate bill Amount as (Get Price from Menu) * OrdQty
+
+               Then check you have sufficient funds or not if no return message as "insufficient funds" 
+
+               if funds are there
+		   Add Record to Order Table
+			 By default OrderStaus is PENDING
+                   Update the Wallet Table Amount of Particular WalletSource 
+
+
+         PendingOrders by Vendor
+         PendingOrders by Customer 
+
+         Customer OrderHistory
+         Vendor OrderHistory 
+
+         AcceptOrReject Order 
+
+                 if Accept then, Change the OrderStatus to 'ACCEPTED'
+                 if reject then, Change the OrderStatus to 'REJECTED' and refund the amount to particular wallet. 
+
+
+
+
+
+
+
+
+
