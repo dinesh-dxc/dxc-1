@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function show(x) {
+		if (x==1) {
+			alert("Gender is Male");
+		} else {
+			alert("Gender is Female");
+		}
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="get" name="frmTest">
+		<center>
+			Gender : 
+			<input type="radio" name="gender" onclick="show(1)" /> Male 
+			<input type="radio" name="gender" onchange="show(2)" /> Female 
+			<br/><br/> 
+		</center>
+	</form>
+</body>
+</html>

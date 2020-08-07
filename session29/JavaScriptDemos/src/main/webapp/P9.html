@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function show() {
+		var name = frmTest.stud.value;
+		alert("Name is  " +name);
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frmTest">
+		<center>
+			Select Names : 
+			<select name="stud" onchange="show()">
+				<option value="Hemanth">Hemanth</option>
+				<option value="Madhura">Madhura</option>
+				<option value="Narayani">Narayani</option>
+				<option value="Pranjali">Pranjali</option>
+				<option value="SaiSiva">Sai Siva</option>
+			</select>
+		</center>
+	</form>
+</body>
+</html>

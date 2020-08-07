@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function strDemo() {
+		var res="";
+		var str="Welcome to HTML Programming...By Prasanna...";
+		var len=str.length;
+		res+="Length of String is   " +len+ "<br/>";
+		res+="Char 'a' Found First at " +str.indexOf('a') + "<br/>";
+		res+="Char 'a' Found Last at  " +str.lastIndexOf('a') + "<br/>";
+		res+="Lower Case String is  " +str.toLowerCase() + "<br/>";
+		res+="Upper Case String is  " +str.toUpperCase() + "<br/>";
+		res+="Replaced String " +str.replace("HTML","Java") + "<br/>";
+		res+="Char at 5th Position  " +str.charAt(5) + "<br/>";
+		document.getElementById("res").innerHTML=res;
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="strDemo()">
+	<span id="res"></span>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function show() {
+		var myArray = [	3, 
+						'hello!', 
+						function () { return 5 }, 
+						{ 'city': 'hyderabad', 'state': 'ts' }
+				];
+		document.writeln("First Value   " +myArray[0] + "<br/>");
+		document.writeln("Second Value  " +myArray[1] + "<br/>");
+		document.writeln("Third Value   " +myArray[2]() + "<br/>");
+		document.writeln("City  " +myArray[3].city + "<br/>");
+		document.writeln("State   " +myArray[3].state + "<br/>");
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="show()">
+
+</body>
+</html>

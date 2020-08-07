@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function check() {
+		var res="";
+		if (frmAttendance.chkAbdul.checked==true) {
+			res+="Abdul is Present Today...<br/>";
+		} else {
+			res+="Abdul is Absent Today...<br/>";
+		}
+		if (frmAttendance.chkArchana.checked==true) {
+			res+="Archana is Present Today...<br/>";
+		} else {
+			res+="Archana is Absent Today...<br/>";
+		}
+		if (frmAttendance.chkNarayani.checked==true) {
+			res+="Narayani is Present Today...<br/>";
+		} else {
+			res+="Narayani is Absent Today...<br/>";
+		}
+		if (frmAttendance.chkMadhura.checked==true) {
+			res+="Madhura is Present Today...<br/>";
+		} else {
+			res+="Madhura is Absent Today...<br/>";
+		}
+		document.getElementById("res").innerHTML=res;
+	}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="frmAttendance">
+		<center>
+			Abdul :
+			<input type="checkbox" name="chkAbdul" onchange="check()" /> 
+			<br/> 
+			Archana :
+			<input type="checkbox" name="chkArchana" onchange="check()" /> 
+			<br/>
+			Narayani : 
+			<input type="checkbox" name="chkNarayani" onchange="check()" /> 
+			<br/>
+			Madhura : 
+			<input type="checkbox" name="chkMadhura" onchange="check()" />
+			<br/>
+		</center>
+		<span id="res"></span>
+	</form>
+</body>
+</html>
