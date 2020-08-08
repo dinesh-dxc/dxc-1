@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		function calc() {
+  		    var a = $("#fno").val();
+            var b = $("#sno").val();
+            var c = a * b;
+            //alert(c);
+            $("#res").val(c);
+  		}
+        $('#fno, #sno').change(calc);
+  	});
+  </script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+        First No : 
+        <input type="number" id="fno" name="fno" /> <br />  <br />
+        Second No : 
+        <input type="number" id="sno" name="sno" /> <br /> <br />
+        Result
+        <input type="number" id="res" name="res" /> <br /><br />
+    </center>
+
+</body>
+</html>

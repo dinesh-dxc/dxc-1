@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+    <script src="jquery.validate.js"></script>
+	<script>
+   	 $(document).ready(function (){
+         $("#frmData").validate({
+             rules: {
+                 "firstName": {
+                     required: true,
+                     minlength:5
+                 },
+                 "lastName": {
+                     required: true,
+                     minlength:5
+                 }
+             },
+             messages: {
+                 "firstName": {
+                     required: "Please Enter First Name",
+                     minlength:"FirstName must be 5 characters atleast"
+                     
+                 },
+                 "lastName": {
+                     required: "Please Enter Last Name",
+                     minlength:"LastName must be 5 characters atleast"
+                 }
+             }
+         });
+      });
+	</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="frmData" id="frmData">
+    First Name : 
+    <input type="text" id="firstName" name="firstName" /> 
+    <br /><br />
+    Last Name : 
+    <input type="text" id="lastName" name="lastName" />
+    <br /><br />
+    <input type="button" value="Show" />
+</form>
+</body>
+</html>
