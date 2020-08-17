@@ -1,0 +1,8 @@
+1) Register complaint
+
+2) Resolve Complaint
+
+3) Show Pending Complaints 
+
+In this, if any issue not solved since 7 days, then that record needs to display in RED color. 
+
