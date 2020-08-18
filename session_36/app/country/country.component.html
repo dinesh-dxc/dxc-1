@@ -1,0 +1,17 @@
+<p>
+  country works!
+</p>
+<table border="3">
+  <tr>
+    <th>Country Id</th>
+    <th>Country Name</th>
+  </tr>
+  <tr *ngFor="let c of countries">
+    <td>
+      {{c.id}}
+    </td>
+    <td>
+      {{c.name}}
+    </td>
+  </tr>
+</table>
