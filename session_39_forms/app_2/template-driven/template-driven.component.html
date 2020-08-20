@@ -1,0 +1,53 @@
+<p>
+  template-driven works!
+</p>
+<p *ngIf="isValidFormSubmitted">Form Submitted Successfully...</p>
+
+<form #userForm="ngForm" (ngSubmit)="onFormSubmit(userForm)">
+  <table border="3">
+    <tr>
+        <td>Name</td>
+        <td>
+          <input name="userName" [(ngModel)]="user.userName" required #userName="ngModel">
+        </td>
+        <div *ngIf="userName.invalid && userForm.submitted && !isValidFormSubmitted"> 
+            <h6>Please Enter Your Name...</h6>
+           </div>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" value="male" name="gender" [(ngModel)]="user.gender"
+                     required #gender="ngModel">
+          Male
+          <input type="radio" value="female" name="gender" [ngModel]="user.gender"
+                required #gender="ngModel">
+          Female
+        </td>
+        <div *ngIf="gender.invalid && userForm.submitted && !isValidFormSubmitted"> 
+            <h6>Please Select Gender...</h6>
+           </div>
+      </tr>      
+      <tr>
+          <td>Are you married ?</td>
+          <td>
+            <input type="checkbox" name="married" [(ngModel)]="user.isMarried">
+          </td>
+        </tr>
+        <tr>
+            <td>Accept T & C</td>
+            <td>
+              <input type="checkbox" name="isTCAccepted"
+                 [ngModel]="user.isTCAccepted" required #isTCAccepted="ngModel">
+            </td>
+            <div *ngIf="isTCAccepted.invalid && userForm.submitted && !isValidFormSubmitted"> 
+                <h6>Please Select Terms & Conditions...</h6>
+               </div>    
+          </tr>          
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Show" />
+      </td>
+    </tr>
+  </table>
+</form>

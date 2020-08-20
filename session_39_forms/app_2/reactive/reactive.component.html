@@ -1,0 +1,56 @@
+<p>
+  reactive works!
+</p>
+<p *ngIf="isValidFormSubmitted">
+User Form Submitted Successfully
+</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <table>
+        <tr>
+          <th>Name:</th>
+          <td>
+            <input formControlName="uname">
+            <div *ngIf="userForm.get('uname').invalid && isValidFormSubmitted !=null && 
+            !isValidFormSubmitted">
+              Please Enter Name...
+            </div>
+          </td>
+        </tr> 
+        <tr>
+            <td>
+              gender:
+            </td>
+            <td>
+              <input type="radio" value="male" formControlName="gender">male
+              <input type = "radio" value ="female" formControlName="gender">female
+              <div *ngIf="userForm.get('gender').invalid && isValidFormSubmitted !=null
+                 && !isValidFormSubmitted">
+                Gender Required
+              </div>
+            </td>
+          </tr>      
+          <tr>
+          <td>Are you Married?</td>
+              <td>
+                <input type="checkbox" formControlName="married">
+              </td>
+            </tr>
+            <tr>
+              <td>Accept T & C</td>
+              <td>
+                <input type="checkbox" formControlName="tc">
+                <div *ngIf="userForm.get('tc').invalid && isValidFormSubmitted !=null && 
+                  !isValidFormSubmitted">
+                  Accept T & C
+                </div>
+              </td>
+            </tr>
+        
+        <tr>
+          <th colspan="2">
+            <input type="submit" value="Show" />
+          </th>
+        </tr>
+    </table>
+</form>

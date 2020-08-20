@@ -1,0 +1,69 @@
+<p>
+  employ-reactive works!
+</p>
+<p *ngIf="isValidFormSubmitted">Employ Form Submitted Successfully...</p>
+
+<form [formGroup]="employForm" (ngSubmit)="onFormSubmit()">
+  <table border="3">
+    <tr>
+      <th>Employ No</th>
+      <td>
+          <input formControlName="empno">
+          <div *ngIf="employForm.get('empno').invalid && isValidFormSubmitted !=null && 
+          !isValidFormSubmitted">
+            Please Enter Employ No...
+          </div>
+
+      </td>
+    </tr>
+    <tr>
+        <th>Employ Name</th>
+        <td>
+            <input formControlName="name">
+            <div *ngIf="employForm.get('name').invalid && isValidFormSubmitted !=null && 
+            !isValidFormSubmitted">
+              Please Enter Employ Name...
+            </div>
+  
+        </td>
+      </tr>
+      <tr>
+          <th>Employ Department</th>
+          <td>
+              <input formControlName="dept">
+              <div *ngIf="employForm.get('dept').invalid && isValidFormSubmitted !=null && 
+              !isValidFormSubmitted">
+                Please Enter Employ Department...
+              </div>
+    
+          </td>
+        </tr>
+        <tr>
+            <th>Employ Designation</th>
+            <td>
+                <input formControlName="desig">
+                <div *ngIf="employForm.get('desig').invalid && isValidFormSubmitted !=null && 
+                !isValidFormSubmitted">
+                  Please Enter Employ Designation...
+                </div>
+      
+            </td>
+          </tr>
+          <tr>
+              <th>Employ Salary</th>
+              <td>
+                  <input formControlName="basic">
+                  <div *ngIf="employForm.get('basic').invalid && isValidFormSubmitted !=null && 
+                  !isValidFormSubmitted">
+                    Please Enter Employ Salary...
+                  </div>
+        
+              </td>
+            </tr>
+    <tr>
+      <th colspan="2">
+        <input type="submit" value="Show" />
+      </th>
+    </tr>
+  </table>
+</form>
