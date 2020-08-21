@@ -1,0 +1,25 @@
+<p>
+  employ-show works!
+</p>
+<table border="3">
+  <tr>
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Department</th>
+    <th>DateOfJoin</th>
+    <th>ManagerId</th>
+    <th>LeaveBalance</th>
+  </tr>
+  <tr *ngFor="let e of employs | async">
+    <td>{{e.empId}}</td>
+    <td>{{e.empName}}</td>
+    <td>{{e.empEmail}}</td>
+    <td>{{e.empMobile}}</td>
+    <td>{{e.empDptName}}</td>
+    <td>{{e.empDateOfJoin}}</td>
+    <td>{{e.empMgrId}}</td>
+    <td>{{e.empLeaveBalance}}</td>
+  </tr>
+</table>

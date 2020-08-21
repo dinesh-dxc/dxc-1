@@ -1,0 +1,17 @@
+<p>
+  employ-search works!
+</p>
+
+Employ No : 
+<input type="text" [(ngModel)]="empno" /> <br/><br/> 
+<input type="button" value="Search" (click)="search()" /> <br/><br/> 
+
+Employ Id : {{empno}} <br/> 
+
+Employ Name : {{ (employ  | async)?.empName }} <br/>
+Employ Email : {{ (employ  | async)?.empEmail }} <br/>
+Employ Mobile : {{ (employ  | async)?.empMobile }} <br/>
+Employ Department : {{ (employ  | async)?.empDptName }} <br/>
+Employ DateOfJoin : {{ (employ  | async)?.empDateOfJoin }} <br/>
+Employ Manager Id : {{ (employ  | async)?.empMgrId }} <br/>
+Leave Balance : {{ (employ  | async)?.empLeaveBalance }} <br/>
