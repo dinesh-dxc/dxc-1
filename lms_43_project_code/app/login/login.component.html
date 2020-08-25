@@ -1,0 +1,28 @@
+<body>
+  <div class="app-content">
+      <div class="group">
+      
+        <div class="loginBox">   
+          
+        <form (submit)="login()" >
+            <h1 align-center>Login</h1>
+  
+            <p> <font size="4">User Name :</font> </p>
+            <br> 
+             <input  type="text" required disabled
+              [(ngModel)]="empId" 
+              name="id" >
+            <br><br>
+            <p> <font size="4">Password : </font></p>
+            <input type="password" required 
+             name="pwd" >
+    <br>
+    
+          <button type="submit" name="action" class="button">LOGIN</button><br><br>
+          <span id="err"><small>{{errorMsg}}</small></span>
+        </form >
+      </div>
+    </div>
+  </div>
+  </body>
+  
