@@ -1,0 +1,28 @@
+<p>
+  my-manager works!
+</p>
+<!-- {{empId}} -->
+<div *ngIf="empId != 0;then thenBlock; else elseBlock">
+  </div>
+  <ng-template #elseBlock>
+      No Manager Available...
+  </ng-template>
+
+  <ng-template #thenBlock>
+<h4>Employee ID : {{ (employee  | async)?.empId }}</h4>
+                
+<h4>Employee Name :{{ (employee  | async)?.empName }}</h4>
+      
+<h4>Employee Dept :{{ (employee  | async)?.empDptName}}</h4>
+
+<h4>Employee Phone :{{ (employee | async)?.empMobile}}</h4> 
+
+<h4>Employee Email :{{ (employee | async)?.empEmail}}</h4> 
+
+<h4>Employee Date of Join :{{ (employee | async)?.empDateOfJoin}}</h4> 
+
+<h4>Employee Manager :{{ (employee | async)?.empMgrId}}</h4> 
+
+<h4>Employee Leave Balance :{{ (employee | async)?.empLeaveBalance}}</h4> 
+
+</ng-template>

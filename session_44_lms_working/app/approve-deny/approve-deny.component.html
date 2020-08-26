@@ -1,0 +1,46 @@
+<p>
+  approve-deny works!
+</p>
+<table border="3">
+  <tr>
+    <th>
+      <h4>empData ID : {{ (empData  | async)?.empId }}</h4>
+                
+<h4>empData Name :{{ (empData  | async)?.empName }}</h4>
+      
+<h4>empData Dept :{{ (empData  | async)?.empDptName}}</h4>
+
+<h4>empData Phone :{{ (empData | async)?.empMobile}}</h4> 
+
+<h4>empData Email :{{ (empData | async)?.empEmail}}</h4> 
+
+<h4>empData Date of Join :{{ (empData | async)?.empDateOfJoin}}</h4> 
+
+<h4>empData Manager :{{ (empData | async)?.empMgrId}}</h4> 
+
+<h4>empData Leave Balance :{{ (empData | async)?.empLeaveBalance}}</h4> 
+
+ <h4>Manager Comments </h4>
+ <input type="text" [(ngModel)]="mgrComment" />
+    </th>
+    <th>
+      <h4>Leave Id : {{ (leaveData | async)?.leaveId}} </h4>
+      <h4>Start Date : {{ (leaveData | async)?.leaveStartDate}} </h4>
+      <h4>End Date : {{ (leaveData | async)?.leaveEndDate}} </h4>
+      <h4>No.of Days : {{ (leaveData | async)?.leaveNoOfDays}} </h4>
+      <h4>Leave Type : {{ (leaveData | async)?.leaveType}} </h4>
+      <h4>Leave Reason : {{ (leaveData | async)?.leaveReason}} </h4>
+    </th>
+  </tr>
+</table>
+<table border="3">
+  <tr>
+    <th>
+      <input type="button" value="Approve" /> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" value="Deny" /> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" value="Cancel" />
+    </th>
+  </tr>
+</table>
